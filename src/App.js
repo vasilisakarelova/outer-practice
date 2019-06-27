@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Suspense, lazy } from 'react'
+import { Helmet } from 'react-helmet'
+import page from 'page'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Link from './helpers/Link.js'
+
+const Main = lazy(() => import('./components/Main.js'))
+
+class App extends Component {
+  state = {
+    projectIdx: null
+  }
+
+  constructor (props) {
+    super(props)
+
+    this.initRouting = this.initRouting.bind(this)
+  }
+
+  initRouting () {
+    //page.base('/new')
+
+    page('/', (ctx, next) => {
+      this.setState({
+        route: ctx.path,
+        projectIdx: null
+      })
+    })
+
+    page()
+  }
+
+  componentDidMount() {
+    this.initRouting()
+  }
+
+  render() {
+    return (
+      <div className="root-inner">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Outer Practice | Home</title>
+          <meta name="author" content="Outer Practice" />
+          <meta name="description" content="Revolving around website and print matters." />
+          <meta name="copyright" content="Outer Practice" />
+        </Helmet>
+        <Suspense fallback={ <div>loading...</div> }>
+          <Main />
+        </Suspense>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default App
