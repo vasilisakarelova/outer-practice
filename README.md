@@ -1,8 +1,7 @@
 # outer practice
 photographers showcase
 
-Libs:  
--
+Libs: -
 
 yarn — install  
 yarn start — start localhost
