@@ -1,5 +1,5 @@
-# outer practice
-photographers showcase
+# showcase
+by outer practice
 
 Libs: -
 

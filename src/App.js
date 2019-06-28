@@ -4,6 +4,7 @@ import page from 'page'
 
 import Link from './helpers/Link.js'
 
+import Header from './components/Header.jsx'
 const Main = lazy(() => import('./components/Main.js'))
 
 class App extends Component {
@@ -44,6 +45,7 @@ class App extends Component {
           <meta name="description" content="Revolving around website and print matters." />
           <meta name="copyright" content="Outer Practice" />
         </Helmet>
+        <Header />
         <Suspense fallback={ <div>loading...</div> }>
           <Main />
         </Suspense>

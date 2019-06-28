@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Monospace';
+    src: url('./fonts/Monospace821BT-Roman.woff') format('woff'),
+        url('./fonts/Monospace821BT-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
