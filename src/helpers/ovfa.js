@@ -30,7 +30,7 @@ export default (el) => {
       diff = el.firstChild.scrollWidth - el.clientWidth
 
       animate(diff)
-    } else if (el.clientWidth == el.scrollWidth) {
+    } else if (el.clientWidth === el.scrollWidth) {
       const dupImg = el.querySelector('img').cloneNode(true)
       el.querySelector('.main-block-slogan--scroll').appendChild(dupImg)
       diff = el.firstChild.scrollWidth - el.clientWidth

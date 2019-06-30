@@ -5,7 +5,7 @@ import page from 'page'
 import Link from './helpers/Link.js'
 
 import Header from './components/Header.jsx'
-const Main = lazy(() => import('./components/Main.js'))
+const GridPhotos = lazy(() => import('./components/GridPhotos.jsx'))
 
 class App extends Component {
   state = {
@@ -47,7 +47,7 @@ class App extends Component {
         </Helmet>
         <Header />
         <Suspense fallback={ <div>loading...</div> }>
-          <Main />
+          <GridPhotos />
         </Suspense>
       </div>
     );

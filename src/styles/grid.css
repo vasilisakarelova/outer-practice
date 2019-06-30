@@ -1,0 +1,8 @@
+.grid-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 10vh;
+  justify-items: stretch;
+  align-items: stretch;
+}
