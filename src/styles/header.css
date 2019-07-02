@@ -1,17 +1,22 @@
 .header-wrap {
   position: sticky;
+  top: 0;
   width: 100%;
   z-index: 99;
 }
 
 .header-inner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   padding: 16px 0px 20px;
   box-shadow: 0px 15px 10px -15px rgba(0, 0, 0, 0.25);
+
+  &.is-hidden {
+    display: none;
+  }
 }
 
 .header-intro {
@@ -25,4 +30,20 @@
 .header-updated-info {
   position: relative;
   width: 100%;
+}
+
+.header-fixed--logo {
+  position: fixed;
+  top: 16px;
+  display: none;
+
+  &.is-shown {
+    display: block;
+  }
+}
+
+.header-fixed--menu {
+  position: fixed;
+  top: 16px;
+  right: 16px;
 }

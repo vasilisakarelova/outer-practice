@@ -2,7 +2,83 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-column-gap: 20px;
-  grid-row-gap: 10vh;
+  grid-row-gap: 150px;
   justify-items: stretch;
   align-items: stretch;
+  padding: 50px 0 100px;
+}
+
+.grid-item--wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.grid-item--img {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+}
+
+.grid-item--link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+
+  &:visited,
+  &:active,
+  &:focus {
+    color: #000;
+    text-decoration: none;
+  }
+
+  &:hover {
+    .grid-item--link-name {
+      opacity: 0;
+    }
+
+    .grid-item--link-sign-wrap {
+      opacity: 1;
+    }
+  }
+
+  &-name {
+    opacity: 1;
+    transition: opacity .1s linear;
+  }
+
+  &-wrap {
+    position: relative;
+    display: block;
+    padding-top: 20px;
+  }
+}
+
+.grid-item--link-sign {
+  position: relative;
+  display: inline-block;
+  height: 16px;
+  width: auto;
+  vertical-align: text-top;
+  padding-right: 7px;
+
+  &-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .1s linear;
+  }
 }
