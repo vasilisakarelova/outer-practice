@@ -1,5 +1,4 @@
 # showcase
-by [outer practice](http://outerpractice.com)
 
 Libs: -
 
