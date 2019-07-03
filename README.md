@@ -1,5 +1,5 @@
 # showcase
-by outer practice
+by [outer practice](http://outerpractice.com)
 
 Libs: -
 
